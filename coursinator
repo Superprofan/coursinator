@@ -1,0 +1,47 @@
+import java.util.Random;
+
+public class Mail {
+	
+	
+
+	public static void main(String[] args) {
+	
+		
+
+	curse();
+		
+		
+		
+	}
+
+	private static void curse(){
+		
+		String sPrefix, sFRoot, sSuffix, sEnding;
+		
+		String[] prefix={"вы", "до", "за", "из", "к", "на", "над", 
+				"не", "недо", "о", "объ", "па", "пере", "по", "под", "пре", "при"};
+		String[] fRoot={"хуе", "пизд", "еб", "бляде", "манда", "елда", 
+				"суко", "шлюхо", "сран", "говн", "жоп", "залуп", "пердо"};
+		String[] adjSuffix={"ев", "в", "чив", "лив", "оват", "еньк", "дск"};
+		
+		String[] ending={"ный", "ительный", "овый"};
+		
+		Random r1 = new Random();
+		Random r2 = new Random();
+		Random r3 = new Random();
+		Random r4 = new Random();
+		
+		int intr1 = r1.nextInt(prefix.length);
+		int intr2 = r2.nextInt(fRoot.length);
+		int intr3 = r3.nextInt(adjSuffix.length);
+		int intr4 = r4.nextInt(ending.length);
+
+		sPrefix = prefix[intr1];
+		sFRoot = fRoot[intr2];
+		sSuffix = adjSuffix[intr3];
+		sEnding = ending[intr4];
+		
+		System.out.println(sPrefix +"-"+ sFRoot +"-"+ sSuffix +"-"+ sEnding);
+	}
+
+}
